@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './transaction.dart';
+import './widgets/user_transactions.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,20 +14,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  List<Transaction> transactionList = [
-    Transaction(
-      id: 't1',
-      title: 'New Dress',
-      amount: 80.34,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Weekly Groceries',
-      amount: 62.53,
-      date: DateTime.now(),
-    ),
-  ];
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,51 +35,7 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
-          Column(
-            children: transactionList.map((txn) {
-              return Card(
-                child: Row(children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 15,
-                    ),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Colors.purple,
-                        width: 2,
-                      ),
-                    ),
-                    padding: EdgeInsets.all(10),
-                    child: Text(
-                      txn.amount.toString(),
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.purple,
-                      ),
-                    ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        txn.title,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      Text(
-                        txn.date.toString(),
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ]),
-              );
-            }).toList(),
-          ),
+          UserTransactions(),
         ],
       ),
     );
