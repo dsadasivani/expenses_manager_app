@@ -52,30 +52,30 @@ class _MyHomePageState extends State<MyHomePage> {
   final amountController = TextEditingController();
 
   final List<Transaction> _userTransactions = [
-    Transaction(
-      id: 't1',
-      title: 'New Dress',
-      amount: 80.34,
-      date: DateTime.now().subtract(Duration(days: 1)),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Weekly Groceries',
-      amount: 62.53,
-      date: DateTime.now().subtract(Duration(days: 3)),
-    ),
-    Transaction(
-      id: 't3',
-      title: 'Booze Party',
-      amount: 90.14,
-      date: DateTime.now().subtract(Duration(days: 3)),
-    ),
-    Transaction(
-      id: 't4',
-      title: 'Movie',
-      amount: 30.25,
-      date: DateTime.now().subtract(Duration(days: 2)),
-    ),
+    // Transaction(
+    //   id: 't1',
+    //   title: 'New Dress',
+    //   amount: 80.34,
+    //   date: DateTime.now().subtract(Duration(days: 1)),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'Weekly Groceries',
+    //   amount: 62.53,
+    //   date: DateTime.now().subtract(Duration(days: 3)),
+    // ),
+    // Transaction(
+    //   id: 't3',
+    //   title: 'Booze Party',
+    //   amount: 90.14,
+    //   date: DateTime.now().subtract(Duration(days: 3)),
+    // ),
+    // Transaction(
+    //   id: 't4',
+    //   title: 'Movie',
+    //   amount: 30.25,
+    //   date: DateTime.now().subtract(Duration(days: 2)),
+    // ),
   ];
 
   List<Transaction> get _recentTransactions {
