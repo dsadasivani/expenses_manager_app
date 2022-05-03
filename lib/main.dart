@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final appBar = AppBar(
-      title: Text('Expenses Manager'),
+      title: const Text('Expenses Manager'),
       actions: [
         IconButton(
           onPressed: () => _startAddNewTransaction(context),
@@ -149,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     return Scaffold(
       appBar: appBar,
+      backgroundColor: Colors.grey[300],
       body: SingleChildScrollView(
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -158,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Show Chart"),
+                  const Text("Show Chart"),
                   Switch(
                     value: _showChart,
                     onChanged: (val) {
